@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Hobbes - Instagram</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <script defer>
+        // Wait for doc to load
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the follow button
+            let followBtn = document.getElementById("follow");
+            // Set the initial state of the button
+            let isFollowing = false;
+            // Add an event listener to the button
+            followBtn.addEventListener("click", followUser);
+
+            function followUser() {
+                // Change the text of the button
+                followBtn.innerText = "Following";
+                // Increase Followers
+                let followers = document.getElementById("followers");
+                followers.innerText = parseInt(followers.innerText) + 1;
+                // Remove the blue background
+                followBtn.classList.remove("bg-blue-500");
+                // Add a gray background
+                followBtn.classList.add("bg-gray-500");
+                // Set the state of the button
+                isFollowing = true;
+            }
+        });
+    </script>
+
+</head>
+
+<body class="max-w-[400px] w-[400px] min-w-[400px]">
+    <header class="top-0 bg-white sticky fixed z-10">
+        <div class="flex w-full border-b-2 items-center justify-center gap-4 p-6">
+            <!-- Left -->
+            <div class="flex flex-shrink justify-start">
+                <a href="/index.html">
+                    <img src="imgs/chevron-left.svg" alt="Instagram Logo" class="h-5 w-5">
+                </a>
+            </div>
+            <!-- Center -->
+            <div class="flex flex-col text-center flex-grow justify-center">
+                <p class="font-bold">Thomas Hobbes</p>
+                <p class="italic">@LeviathanPhilosopher</p>
+            </div>
+            <!-- Right -->
+            <div class="flex flex-shrink justify-end gap-6">
+                <img src="imgs/more-horizontal.svg" alt="Live" class="h-5 w-5">
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Info -->
+    <section class="flex justify-start items-center gap-2 p-2">
+        <div class="flex-shrink-0">
+            <img src="imgs/PFP.jpg" alt="Thomas Hobbes Profile" class="rounded-full w-20 h-20">
+        </div>
+        <div class="ml-6">
+            <div class="flex gap-4 justify-center items-center text-center w-full">
+                <div class="">
+                    <p class="font-black">8</p>
+                    <p>posts</p>
+                </div>
+                <div class="">
+                    <p id="followers" class="font-black">3</p>
+                    <p>folowers</p>
+                </div>
+                <div class="">
+                    <p class="font-black">0</p>
+                    <p>following</p>
+                </div>
+            </div>
+            <button id="follow" class="mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded-full">Follow</button>
+        </div>
+    </section>
+    <div class="ml-6">
+        <p class="">
+            Life in the state of nature: Nasty, Brutish, and Short. Social Contract: Our pact for peace and order. 🤝
+        </p>
+        <p class="italic">
+            #HobbesianPhilosophy #SocialContract #HumanNature
+        </p>
+    </div>
+    <p class="text-gray-500 mx-6">Followed By: John Locke, Jean-Jacques Rousseau, and Karl Marx</p>
+    <div class="p-3 grid grid-cols-3 grid-rows-2 gap-3 w-full h-full place-items-center">
+        <div>
+            <img class="object-cover w-32 h-32" src="https://www.psypost.org/wp-content/uploads/2021/01/protesters-set-fire-750x375.jpg" alt="Post 1" />
+            <p class="text-sm text-gray-600 italic">#StateOfNature #HobbesianChaos #HumanNatureStruggle</p>
+        </div>
+        
+        <div>
+            <img class="object-cover w-32 h-32" src="https://www.phaidon.com/resource/leviathan-by-thomas-hobbes-lead.jpg" alt="Post 2" />
+            <p class="text-sm text-gray-600 italic">#LeviathanGovernment #SocietyOrder #GovernmentStability</p>
+        </div>
+        
+        <div>
+            <img class="object-cover w-32 h-32" src="https://media.licdn.com/dms/image/C4D12AQG7MZBH9sajRA/article-cover_image-shrink_720_1280/0/1623153085007?e=2147483647&v=beta&t=MZkvtE1ECUfptGO11HRpqZWf_AWszH5BfMwL915UkYg" alt="Post 3" />
+            <p class="text-sm text-gray-600 italic">#SocialContractSigning #AgreementForPeace #CommunityFormation</p>
+        </div>
+        
+        <div>
+            <img class="object-cover w-32 h-32" src="https://www.perlego.com/books/RM_Books/ingram_csplus_gexhsuob/9781528785815.jpg" alt="Post 4" />
+            <p class="text-sm text-gray-600 italic">#LeviathanBook #HobbesQuotes #PhilosophicalReads</p>
+        </div>
+        
+        <div>
+            <img class="object-cover w-32 h-32" src="https://i0.wp.com/upload.wikimedia.org/wikipedia/commons/d/de/Battle_of_Marston_Moor%2C_1644.png" alt="Post 5" />
+            <p class="text-sm text-gray-600 italic">#WarOfAllAgainstAll #HumanNatureConflict #SurvivalInstincts</p>
+        </div>
+        
+        <div>
+            <img class="object-cover w-32 h-32" src="https://img.atlasobscura.com/2tCHgw2aUD3pBkrNtpb2bv-xyh0V6ukUAl32TOb46jw/rs:fill:780:520:1/g:ce/c:914:609:nowe:314:783/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL2Fzc2V0/cy9hYzZlYjc3Yzli/NDAxNDM2NDJfYXVz/dGVuIGphbmUgbGV0/dGVyLmpwZw.jpg" alt="Post 6" />
+            <p class="text-sm text-gray-600 italic">#HobbesianThoughts #PhilosophicalJourney #IntellectualProcess</p>
+        </div>
+        
+    </div>
+    <nav class="flex bg-white w-full border-b-2 items-center justify-center gap-4 p-6 fixed bottom-0 border-t-2 ">
+        <!-- A List of 4 Horizontally stretched icons -->
+        <div class="flex gap-4 justify-evenly w-full">
+            <img src="imgs/home.svg" alt="Home" class="h-5 w-5" />
+            <img src="imgs/search.svg" alt="Explore" class="h-5 w-5" />
+            <img src="imgs/plus-circle.svg" alt="Explore" class="h-5 w-5" />
+            <img src="imgs/heart.svg" alt="Likes" class="h-5 w-5" />
+        </div>
+    </nav>
+
+</body>
+
+</html>
